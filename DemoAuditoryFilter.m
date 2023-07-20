@@ -19,6 +19,8 @@
 %     Modified: 22 Jun 2019 (DirWork等の操作性の向上) 
 %     Modified: 17 Apr 2020 (Win octave でもprintできた。）
 %     Modified:  1 Jul 2020  (octaveでoptimizationができるように）
+%     Modified: 17 Jul 2023 (Win Octave8.2.0で、epsが出力できずフリーズ。DemoAF_PrintFig.mを変更。)
+%     Modified: 18 Jul 2023 (日本語空白文字を消去。ーー　見つけたら消去のこと)
 %
 %     Note: 
 %     このデモは、以下の文献用に書かれたものです。
@@ -50,6 +52,10 @@
 %     Note7 (2020/7/1)
 %     octaveでも動くように改良
 %
+%     Note8(2023/7/17)
+%     Win Octave8.2.0で、epsが出力できずフリーズ。DemoAF_PrintFig.mを変更。png出力のみに
+%
+%
 clear
 
 %  DirWork はこちらで割り当て。 SwDirWorkの選択は削除。 1 Jul 2020
@@ -62,16 +68,16 @@ chdir(Dir1); % プログラムのDirectoryに強制移動
 disp(['図面やデータ等は： ' DirWork 'に出力／保存されます。']);
 
 
-SwEnglish = 0;  % Japanese    日本語 (default)
-SwEnglish = 1; % English     英語
+%SwEnglish = 0;  % Japanese    日本語 
+SwEnglish = 1; % English     英語　 (default)
 
 isOctave = 0;
 NameRsltNN = [DirWork 'DemoAF_RsltNN.mat']; 
-if exist('OCTAVE_VERSION') == 5,  % Octaveなら１になる。
+if exist('OCTAVE_VERSION') == 5  % Octaveなら１になる。
     isOctave =1;
     NameRsltNN = [DirWork 'DemoAF_RsltNN_octave.mat'];  % mat形式が異なるため。
     SwEnglish = 1; % Octaveだと英語に
-end;
+end
 
 
 %SwSound = 0;   % No sound playback for　lecture demonstration　教室デモ用
@@ -80,7 +86,7 @@ SwSound = 1;  % playback sound (default)
 % SwPrint = 0; % No print. e.g. when there is trouble with MATLAB2015a.
 SwPrint = 1;
 
-if SwEnglish == 0,
+if SwEnglish == 0
   strDemo0 = 'デモ:';
   strDemo(1) = {'  1) 聴覚フィルタの基礎'};
   strDemo(2) = {'  2) 臨界帯域幅'};
@@ -95,43 +101,43 @@ else
   strDemo(3) = {'  3) Notched noise masking'};
   strDemo(4) = {'  4) Estimation of filter shape'};
   strDemoQ ='Select demo number >> ';
-end;
+end
 
 disp(strDemo0);
-for nd =1:4,
+for nd =1:4
     disp(char(strDemo(nd)));
-end;
+end
 SwDemo = input(strDemoQ);
-if length(SwDemo) == 0, SwDemo = 1; end;
+if length(SwDemo) == 0, SwDemo = 1; end
  
 disp(' ');
 disp(['===  ' strDemo0  char(strDemo(SwDemo)) '  ===']);
 
 %%
 switch SwDemo
-  case 1,
+  case 1
     close all
     DemoAF_Basics
  
-  case 2,
+  case 2
     DemoAF_CriticalBand
    % Responses for ASJ review Fig.4 : 12 8 8 8 9 10 
 
-  case 3,
+  case 3
     DemoAF_NotchedNoise
     % Responses for ASJ review Fig. 6 : 13 5 6 8 10 11 12 
     %%% save the result for filer-shape estimation in case 4
     str = ['save ' NameRsltNN ' ProbeLevel ParamNN ' ];
     eval(str);
  
- case 4,
-    if exist(NameRsltNN) == 0,
+ case 4
+    if exist(NameRsltNN) == 0
         disp('No experimental data exists. Execute 3) first.');
-    end;
+    end
     %%% load the result of exp. notched noise in case 3
     DemoAF_ShapeEstimation
            
-end;
+end
 
 disp(' ');
 

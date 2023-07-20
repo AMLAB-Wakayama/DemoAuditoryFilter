@@ -1,0 +1,19 @@
+.DS_Store
+Thumbs.db
+*.docx
+*.m~
+
+# MATLAB
+*.asv
+Tool/*.asv
+
+# Local
+_Local/
+Previous/
+previous/
+
+
+# ignore old ones -- No track 27 Jan 2022
+#GCFBv211pack
+#GCFBv221pack
+

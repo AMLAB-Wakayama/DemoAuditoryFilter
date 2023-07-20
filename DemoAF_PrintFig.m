@@ -14,12 +14,13 @@
 %     Modified: 21 Jan 2018 (print(Name, '-deps', '-tiff'))
 %     Modified: 17 Aug 2018 (if SwPrint == 2, set(gcf,'PaperPosition',[2 2 27 20]))
 %     Modified: 17 Apr 2020 (Win octave でもprintできた。）
+%     Modified: 17 Jul 2023 (Win Octave8.2.0で、epsが出力できずフリーズ。その行をコメントアウト。
 %
 %
 function DemoAF_PrintFig(NameFig,SwPrint)
 
-if nargin < 2, SwPrint = []; end;
-if length(SwPrint)==0, SwPrint = 1; end;
+if nargin < 2, SwPrint = []; end
+if length(SwPrint)==0, SwPrint = 1; end
 
 %if exist('OCTAVE_VERSION') > 0,
 %    warning('No print on Octave.');
@@ -30,7 +31,7 @@ if length(SwPrint)==0, SwPrint = 1; end;
 if SwPrint  < 1
     warning(['No print.  SwPrint = ' int2str(SwPrint) '.']);
     return;
-end;
+end
 
 %% for MATLAB
 
@@ -41,25 +42,26 @@ if 0
     set(0,'DefaultAxesLinewidth', 1.0);
     set(0,'DefaultLineLinewidth', 1.0);
     set(0,'DefaultPatchLinewidth', 1.0);
-end;
+end
 
 set(gcf,'PaperOrientation','portrait');
 set(gcf,'PaperUnits','centimeters');
 set(gcf,'PaperPosition',[3 8 14 12]);
-if SwPrint == 2, % for Excitation Pattern
+if SwPrint == 2  % for Excitation Pattern
     %set(gcf,'PaperPosition',[2 2 20 20]);
     set(gcf,'PaperPosition',[2 2 27 20]);  % 17 Aug 18
-end;
+end
 drawnow
 try
-    print(NameFig,'-deps');
     print(NameFig,'-dpng','-r300');
+    % 17 Jul 2023
+    % print(NameFig,'-deps'); % Win, Octave8.2.0ではフリーズする
     % 21 Jan 2018
     % print(NameFig,'-dpng','-r300');
     % print(NameFig,'-deps','-tiff'); % -tiffがあるとエラーMATLAB2017a
 catch
     warning('No print available')
-end;
+end
 
     
     %str = ['print -dpng -r300 ' NameFig];
