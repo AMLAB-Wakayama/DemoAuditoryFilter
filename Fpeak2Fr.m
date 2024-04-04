@@ -1,4 +1,4 @@
-%
+﻿%
 %    Estimate fr from fpeak 
 %    Toshio IRINO
 %    Created: 10 June 98

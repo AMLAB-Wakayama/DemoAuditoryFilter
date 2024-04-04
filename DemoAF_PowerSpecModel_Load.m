@@ -1,4 +1,4 @@
-%
+﻿%
 %     Demonstrations for introducting auditory filters
 %     DemoAF_PowerSpecModel
 %     Error from Power Spectral model of masking
@@ -15,8 +15,8 @@ function ErrorVal = DemoAF_PowerSpecModel_Load(ParamOpt);
    SwRslt = 0;
    DirWork = ['./Figs/']; % current directory/Figs/
    NameRsltNN = [DirWork 'DemoAF_RsltNN.mat']; 
-   if exist('OCTAVE_VERSION') == 5, %  isOctave = 1; end; % Octave�Ȃ�P�ɂȂ�B
-    NameRsltNN = [DirWork 'DemoAF_RsltNN_octave.mat'];  % mat�`�����قȂ邽�߁B
+   if exist('OCTAVE_VERSION') == 5, %  isOctave = 1; end; % Octaveなら１になる。
+    NameRsltNN = [DirWork 'DemoAF_RsltNN_octave.mat'];  % mat形式が異なるため。
    end;
 
 

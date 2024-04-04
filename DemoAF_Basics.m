@@ -1,4 +1,4 @@
-%
+ï»¿%
 %     Demonstrations for introducting auditory filters
 %     DemoAF_Basics
 %     Irino, T.
@@ -10,14 +10,14 @@
 %     Modified: 25 May 2015 (introduction of SwPrint)
 %     Modified: 12 Dec 2017 (introduction of DemoAF_ExcitationPattern)
 %     Modified: 21 Jan 2017 (exist('b1') == 0)
-%     Modified:   1 Jul  2020  GT&GT impulse response/ freq. response‚ğ‚±‚±‚Å  plot
+%     Modified:   1 Jul  2020  GT&GT impulse response/ freq. responseã‚’ã“ã“ã§  plot
 %
 %
 %     Note3 (2017/12/13)
-%      DemoAF_ExcitationPattern‚ğDemoAF_Basics’†‚É“±“üB
+%      DemoAF_ExcitationPatternã‚’DemoAF_Basicsä¸­ã«å°å…¥ã€‚
 %
 
-if exist('b1') == 0,  %@’P“Æ‚ÅÀs‚·‚éê‡—p
+if exist('b1') == 0,  %ã€€å˜ç‹¬ã§å®Ÿè¡Œã™ã‚‹å ´åˆç”¨
     %%% Param values from PUI 2003 %%%
     n = 4;
     b1 = 1.81;

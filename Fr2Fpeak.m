@@ -1,4 +1,4 @@
-%
+﻿%
 %    Estimate fr from fpeak 
 %    Toshio IRINO
 %    10 June 98

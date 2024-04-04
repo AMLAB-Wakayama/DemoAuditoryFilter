@@ -1,4 +1,4 @@
-%
+﻿%
 %	Gammachirp : Theoretical auditory filter 
 %	Toshio IRINO
 %	7 Apr. 97 (additional comments)

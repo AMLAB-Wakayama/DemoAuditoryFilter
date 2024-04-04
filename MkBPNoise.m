@@ -1,4 +1,4 @@
-%
+﻿%
 %      Make BandPass Noise through FFT
 %      Irino, T.
 %      Created before: 29 Jan 98
