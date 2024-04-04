@@ -1,4 +1,4 @@
-%
+﻿%
 %     Demonstrations for introducting auditory filters
 %     DemoAF_PowerSpecModel
 %     Error from Power Spectral model of masking

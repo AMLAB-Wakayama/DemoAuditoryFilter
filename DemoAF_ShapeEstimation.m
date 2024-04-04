@@ -1,4 +1,4 @@
-%
+ï»¿%
 %     Demonstrations for introducting auditory filters
 %     DemoAF_ShapeEstimation
 %     Estimation of Auditory filter frequency response
@@ -11,7 +11,7 @@
 %     Modified: 14 Jun 2010 (Gammatone & Gammachirp)
 %     Modified: 25 Jun 2010 (Fig. 12)
 %     Modified: 25 May 2015 (introduction of SwPrint)
-%     Modified:  1 Jul 2020  (octave‚Åoptimization‚ª‚Å‚«‚é‚æ‚¤‚Éj
+%     Modified:  1 Jul 2020  (octaveã§optimizationãŒã§ãã‚‹ã‚ˆã†ã«ï¼‰
 %
 %     
 
@@ -21,8 +21,8 @@
    eval(str);
 
    Nrsl = 2^12;
-   ParamNN.Nrsl = Nrsl;   %  ‚±‚Ìƒpƒ‰ƒ[ƒ^ mat‚Ì’†‚É•K—v
-   str = ['save ' NameRsltNN ' ProbeLevel ParamNN ' ]; % Ä“x save
+   ParamNN.Nrsl = Nrsl;   %  ã“ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ matã®ä¸­ã«å¿…è¦
+   str = ['save ' NameRsltNN ' ProbeLevel ParamNN ' ]; % å†åº¦ save
    eval(str);
 
    b_init  = 1.019; 
@@ -43,9 +43,9 @@
    str2 = ['RMS error = ' num2str(fval,3) ' (dB)'];
 
    if SwEnglish == 0,
-     disp(['„’èŒ‹‰Ê']);
-     disp(['ƒpƒ‰ƒ[ƒ^’l: ', str1]);
-     disp(['„’èŒë·: ', str2]);
+     disp(['æ¨å®šçµæœ']);
+     disp(['ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿å€¤: ', str1]);
+     disp(['æ¨å®šèª¤å·®: ', str2]);
    else
      disp(['Estimation Result']);
      disp(['Parameter values: ' str1]);

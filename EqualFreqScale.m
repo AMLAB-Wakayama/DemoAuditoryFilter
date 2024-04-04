@@ -1,4 +1,4 @@
-%
+﻿%
 %       Calculation of Equal Frequency scale on ERB/Mel/Log/Linear scale
 %       Toshio IRINO
 %       5 Oct 2001

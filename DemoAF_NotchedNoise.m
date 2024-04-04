@@ -1,4 +1,4 @@
-%
+ï»¿%
 %     Demonstrations for introducting auditory filters
 %     DemoAF_NotchedNoise
 %     Irino, T.
@@ -11,8 +11,8 @@
 %     Modified: 11 Jun 2010 (Figure number)
 %     Modified: 25 May 2015 (sound --> audioplayer+playblocking, MATLAB2013a-)
 %     Modified: 25 May 2015 (introduction of SwPrint)
-%     Modified:  1 Jul 2020  (octave‚Åoptimization‚ª‚Å‚«‚é‚æ‚¤‚Éj
-%     Modified:  2 Jul 2020  (debug, StrAnsj
+%     Modified:  1 Jul 2020  (octaveã§optimizationãŒã§ãã‚‹ã‚ˆã†ã«ï¼‰
+%     Modified:  2 Jul 2020  (debug, StrAnsï¼‰
 %
 %
 %
@@ -41,8 +41,8 @@ for nb = 0:length(ParamNN.FreqLowMax)
     if nb == 0, % no masking noise
         disp(' ');
         if SwEnglish == 0,
-            disp('‚TdB‚¸‚ÂŒ¸Š‚·‚éƒvƒ[ƒu‰¹Œn—ñ‚ð‚Q‰ñÄ¶‚µ‚Ü‚·B');
-            disp('‰½ŒÂ•·‚±‚¦‚é‚©“š‚¦‚Ä‚­‚¾‚³‚¢B');
+            disp('ï¼•dBãšã¤æ¸›è¡°ã™ã‚‹ãƒ—ãƒ­ãƒ¼ãƒ–éŸ³ç³»åˆ—ã‚’ï¼’å›žå†ç”Ÿã—ã¾ã™ã€‚');
+            disp('ä½•å€‹èžã“ãˆã‚‹ã‹ç­”ãˆã¦ãã ã•ã„ã€‚');
         else
             disp('You will hear 2000-Hz tone in several descreasing steps of 5 dBs.');
             disp('Count how many steps you can hear.');
@@ -56,8 +56,8 @@ for nb = 0:length(ParamNN.FreqLowMax)
         disp(['------------------------']);
         if nb == 1,
             if SwEnglish == 0,
-                disp('ŽŸ‚Éƒmƒbƒ`ŽG‰¹‚ðdô‚µ‚Ü‚·B');
-                disp('ƒmƒbƒ`ŽG‰¹‚ÌŽí—Þ‚²‚Æ‚É,‰½ŒÂ•·‚±‚¦‚é‚©“š‚¦‚Ä‚­‚¾‚³‚¢B');
+                disp('æ¬¡ã«ãƒŽãƒƒãƒé›‘éŸ³ã‚’é‡ç•³ã—ã¾ã™ã€‚');
+                disp('ãƒŽãƒƒãƒé›‘éŸ³ã®ç¨®é¡žã”ã¨ã«,ä½•å€‹èžã“ãˆã‚‹ã‹ç­”ãˆã¦ãã ã•ã„ã€‚');
             else
                 disp('Now the signal is masked with notched noise.');
                 disp('How many steps can you hear?');
@@ -67,7 +67,7 @@ for nb = 0:length(ParamNN.FreqLowMax)
         BPN1 = [];
         BPN2 = [];
         if SwEnglish == 0,
-            disp(['ƒmƒbƒ`• ' int2str(ParamNN.FreqNotchWidth(nb)) ...
+            disp(['ãƒŽãƒƒãƒå¹… ' int2str(ParamNN.FreqNotchWidth(nb)) ...
                 '(Hz)']);
         else
             disp(['Notch width: ' int2str(ParamNN.FreqNotchWidth(nb)) ...
@@ -94,9 +94,9 @@ for nb = 0:length(ParamNN.FreqLowMax)
     StrAns ='Steps >> '; % default for SwSound == 0
     if SwSound == 1,
         if SwEnglish == 0,
-            kk = input('ƒŠƒ^[ƒ“‚ÅÄ¶ŠJŽn >> ');
-            disp(['Ä¶’†...@@iFigure ' int2str(NumFig) ' ‚ÉƒXƒyƒNƒgƒ‹•\Ž¦’†j']);
-            StrAns ='•·‚±‚¦‚½” >> ';
+            kk = input('ãƒªã‚¿ãƒ¼ãƒ³ã§å†ç”Ÿé–‹å§‹ >> ');
+            disp(['å†ç”Ÿä¸­...ã€€ã€€ï¼ˆFigure ' int2str(NumFig) ' ã«ã‚¹ãƒšã‚¯ãƒˆãƒ«è¡¨ç¤ºä¸­ï¼‰']);
+            StrAns ='èžã“ãˆãŸæ•° >> ';
         else
             kk = input('Start by return >> ');
             disp(['Playing now...     (Spectrum is shown in Figure ' int2str(NumFig) '.)']);

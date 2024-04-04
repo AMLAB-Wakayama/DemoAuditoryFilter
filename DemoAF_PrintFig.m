@@ -1,4 +1,4 @@
-%
+ï»¿%
 %     Demonstrations for introducting auditory filters
 %     DemoAF_PrintFig
 %     Irino, T.
@@ -13,8 +13,8 @@
 %     Modified: 12 Dec 2017 (eval('print -deps -tiff ') --> NG MATLAB2017a)
 %     Modified: 21 Jan 2018 (print(Name, '-deps', '-tiff'))
 %     Modified: 17 Aug 2018 (if SwPrint == 2, set(gcf,'PaperPosition',[2 2 27 20]))
-%     Modified: 17 Apr 2020 (Win octave ‚Å‚àprint‚Å‚«‚½Bj
-%     Modified: 17 Jul 2023 (Win Octave8.2.0‚ÅAeps‚ªo—Í‚Å‚«‚¸ƒtƒŠ[ƒYB‚»‚Ìs‚ğƒRƒƒ“ƒgƒAƒEƒgB
+%     Modified: 17 Apr 2020 (Win octave ã§ã‚‚printã§ããŸã€‚ï¼‰
+%     Modified: 17 Jul 2023 (Win Octave8.2.0ã§ã€epsãŒå‡ºåŠ›ã§ããšãƒ•ãƒªãƒ¼ã‚ºã€‚ãã®è¡Œã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã€‚
 %
 %
 function DemoAF_PrintFig(NameFig,SwPrint)
@@ -55,10 +55,10 @@ drawnow
 try
     print(NameFig,'-dpng','-r300');
     % 17 Jul 2023
-    % print(NameFig,'-deps'); % Win, Octave8.2.0‚Å‚ÍƒtƒŠ[ƒY‚·‚é
+    % print(NameFig,'-deps'); % Win, Octave8.2.0ã§ã¯ãƒ•ãƒªãƒ¼ã‚ºã™ã‚‹
     % 21 Jan 2018
     % print(NameFig,'-dpng','-r300');
-    % print(NameFig,'-deps','-tiff'); % -tiff‚ª‚ ‚é‚ÆƒGƒ‰[MATLAB2017a
+    % print(NameFig,'-deps','-tiff'); % -tiffãŒã‚ã‚‹ã¨ã‚¨ãƒ©ãƒ¼MATLAB2017a
 catch
     warning('No print available')
 end
@@ -66,7 +66,7 @@ end
     
     %str = ['print -dpng -r300 ' NameFig];
     %eval(str);
-    %str = ['print -deps -tiff ' NameFig]; %—¼•û‚Æ‚ào‚·B
+    %str = ['print -deps -tiff ' NameFig]; %ä¸¡æ–¹ã¨ã‚‚å‡ºã™ã€‚
     %eval(str);
     
     %SwEps = 1;

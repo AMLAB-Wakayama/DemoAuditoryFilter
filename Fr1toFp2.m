@@ -1,4 +1,4 @@
-%
+﻿%
 %	Calculate Fp2 from Fr1
 %
 %	function [Fp2,Fr2] = Fr1toFp2(n,b1,c1,b2,c2,frat,Fr1)

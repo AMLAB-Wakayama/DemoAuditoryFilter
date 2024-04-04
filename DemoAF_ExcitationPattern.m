@@ -1,4 +1,4 @@
-%
+ï»¿%
 %     Demonstrations for introducting auditory filters
 %     DemoAF_Excitation Pattern
 %     Irino, T.
@@ -11,8 +11,8 @@
 %
 
 if exist('b1') == 0
-    %@DemoAF_Basics.m‚©‚ç’ÊíŒÄ‚Î‚ê‚é‚Ì‚Å‚±‚±‚Í•s—vB
-    %@‚½‚¾A‚±‚ÌƒvƒƒOƒ‰ƒ€‚ğ’P“Æ‚Å‚à“®‚©‚¹‚é‚æ‚¤‚ÉB
+    %ã€€DemoAF_Basics.mã‹ã‚‰é€šå¸¸å‘¼ã°ã‚Œã‚‹ã®ã§ã“ã“ã¯ä¸è¦ã€‚
+    %ã€€ãŸã ã€ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’å˜ç‹¬ã§ã‚‚å‹•ã‹ã›ã‚‹ã‚ˆã†ã«ã€‚
     %
     
     %%% Param values from PUI 2003 %%%
@@ -37,7 +37,7 @@ NumCh = 100;
 ERBpList = linspace(ERBRange(1),ERBRange(2),NumCh);
 fpList = ERB2Freq(ERBpList);
 
-%StrPanel = {' ',' ',' ',' ',' ',' '}; %Panel‚Ì‹æ•ª•\¦‚È‚µ‚Ìê‡
+%StrPanel = {' ',' ',' ',' ',' ',' '}; %Panelã®åŒºåˆ†è¡¨ç¤ºãªã—ã®å ´åˆ
 
 StrPanel = {'(a)','(b)','(c)','(d)','(e)','(f)'};
 

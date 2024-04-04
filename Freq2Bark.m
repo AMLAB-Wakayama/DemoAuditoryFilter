@@ -1,4 +1,4 @@
-%
+﻿%
 %	Frequency -> Bark and CB (Critical-Band)
 %	IRINO Toshio
 %	Created:  28 Mar. 95

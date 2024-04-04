@@ -1,4 +1,4 @@
-%
+ï»¿%
 %     Demonstrations for introducting auditory filters 
 %     Irino, T. 
 %     Created:   9 Mar 2010
@@ -7,92 +7,92 @@
 %     Modified: 31 Mar 2010
 %     Modified:  7 Apr 2010
 %     Modified: 11 Apr 2010 (Unicode for MATLAB 2010a)
-%     Modified: 11 Jun 2010 (Figure numberAstrDemo)
+%     Modified: 11 Jun 2010 (Figure numberã€strDemo)
 %     Modified: 27 Jul 2010 (SwSound, DemoAF_PrintFig)
 %     Modified:  3 Sep 2010 (SwEnglish, Note)
 %     Modified: 10 Sep 2010 (sound(PlaySnd(:),fs))
 %     Modified: 25 May 2015 (sound --> audioplayer+playblocking, MATLAB2013a-)
 %     Modified: 25 May 2015 (introduction of SwPrint)
 %     Modified: 12 Dec 2017 (introduction of DemoAF_ExcitationPattern)
-%     Modified: 28 Mar 2018 (isOctave‚Ì“±“ü)
-%     Modified: 28 May 2019 (Octave‚ÅAShapeEstimation‚Å‚«‚È‚¢‚½‚ßAerroro—Í)
-%     Modified: 22 Jun 2019 (DirWork“™‚Ì‘€ì«‚ÌŒüã) 
-%     Modified: 17 Apr 2020 (Win octave ‚Å‚àprint‚Å‚«‚½Bj
-%     Modified:  1 Jul 2020  (octave‚Åoptimization‚ª‚Å‚«‚é‚æ‚¤‚Éj
-%     Modified: 17 Jul 2023 (Win Octave8.2.0‚ÅAeps‚ªo—Í‚Å‚«‚¸ƒtƒŠ[ƒYBDemoAF_PrintFig.m‚ð•ÏXB)
-%     Modified: 18 Jul 2023 (“ú–{Œê‹ó”’•¶Žš‚ðÁ‹ŽB[[@Œ©‚Â‚¯‚½‚çÁ‹Ž‚Ì‚±‚Æ)
+%     Modified: 28 Mar 2018 (isOctaveã®å°Žå…¥)
+%     Modified: 28 May 2019 (Octaveã§ã€ShapeEstimationã§ããªã„ãŸã‚ã€errorå‡ºåŠ›)
+%     Modified: 22 Jun 2019 (DirWorkç­‰ã®æ“ä½œæ€§ã®å‘ä¸Š) 
+%     Modified: 17 Apr 2020 (Win octave ã§ã‚‚printã§ããŸã€‚ï¼‰
+%     Modified:  1 Jul 2020  (octaveã§optimizationãŒã§ãã‚‹ã‚ˆã†ã«ï¼‰
+%     Modified: 17 Jul 2023 (Win Octave8.2.0ã§ã€epsãŒå‡ºåŠ›ã§ããšãƒ•ãƒªãƒ¼ã‚ºã€‚DemoAF_PrintFig.mã‚’å¤‰æ›´ã€‚)
+%     Modified: 18 Jul 2023 (æ—¥æœ¬èªžç©ºç™½æ–‡å­—ã‚’æ¶ˆåŽ»ã€‚ãƒ¼ãƒ¼ã€€è¦‹ã¤ã‘ãŸã‚‰æ¶ˆåŽ»ã®ã“ã¨)
 %
 %     Note: 
-%     ‚±‚Ìƒfƒ‚‚ÍAˆÈ‰º‚Ì•¶Œ£—p‚É‘‚©‚ê‚½‚à‚Ì‚Å‚·B
-%     “ü–ì,"‚Í‚¶‚ß‚Ä‚Ì’®ŠoƒtƒBƒ‹ƒ^",“ú–{‰¹‹¿Šw‰ïŽ, 66Šª10†, pp.506-512, 2010.
-%     ƒfƒ‚‚ÌÚ×‚ÍA–{•¶‚ðŽQÆ‚­‚¾‚³‚¢B
-%@@@* MATLAB_R2010a—p‚Å‚·B
-%     * Octave‚¾‚ÆsoundŠÖ”‚âplotŠÖŒW‚ÌŠÖ”‚Ì•ÏX‚ª•K—v‚¾‚ÆŽv‚í‚ê‚Ü‚·B
-%      ƒfƒ‚4‚Ì’†‚ÌAfminsearch()‚à•ÏX‚ª•K—v‚ç‚µ‚¢‚Å‚·BÅ¬‚Qæ–@‚Å‰ð‚¢‚Ä‚­‚¾‚³‚¢B
+%     ã“ã®ãƒ‡ãƒ¢ã¯ã€ä»¥ä¸‹ã®æ–‡çŒ®ç”¨ã«æ›¸ã‹ã‚ŒãŸã‚‚ã®ã§ã™ã€‚
+%     å…¥é‡Ž,"ã¯ã˜ã‚ã¦ã®è´è¦šãƒ•ã‚£ãƒ«ã‚¿",æ—¥æœ¬éŸ³éŸ¿å­¦ä¼šèªŒ, 66å·»10å·, pp.506-512, 2010.
+%     ãƒ‡ãƒ¢ã®è©³ç´°ã¯ã€æœ¬æ–‡ã‚’å‚ç…§ãã ã•ã„ã€‚
+%ã€€ã€€ã€€* MATLAB_R2010aç”¨ã§ã™ã€‚
+%     * Octaveã ã¨soundé–¢æ•°ã‚„ploté–¢ä¿‚ã®é–¢æ•°ã®å¤‰æ›´ãŒå¿…è¦ã ã¨æ€ã‚ã‚Œã¾ã™ã€‚
+%      ãƒ‡ãƒ¢4ã®ä¸­ã®ã€fminsearch()ã‚‚å¤‰æ›´ãŒå¿…è¦ã‚‰ã—ã„ã§ã™ã€‚æœ€å°ï¼’ä¹—æ³•ã§è§£ã„ã¦ãã ã•ã„ã€‚
 %     
 %     Note2 (2015/5/25)
-%      sound()ŠÖ”‚ÍA‚·‚®§Œä‚ð–ß‚µ‚Ä‚µ‚Ü‚¢AŽg‚¢ŸŽè‚ªˆ«‚­‚È‚è‚Ü‚µ‚½B
-%      ‚»‚±‚ÅAMATLAB‚ÌÅ‹ß‚ÌŽd—l‚É‡‚í‚¹‚Äaudioplayer+playblocking‚É•ÏX‚µ‚Ü‚µ‚½B
-%      •ÏX‚ÍADemoAF_CriticalBand.m, DemoAF_NotchedNoise.m‚Ì’†‚Å‚·B
-%      MATLAB2013a‚Å‚Ì“®ì‚ÍŠm”FÏ‚ÝB
+%      sound()é–¢æ•°ã¯ã€ã™ãåˆ¶å¾¡ã‚’æˆ»ã—ã¦ã—ã¾ã„ã€ä½¿ã„å‹æ‰‹ãŒæ‚ªããªã‚Šã¾ã—ãŸã€‚
+%      ãã“ã§ã€MATLABã®æœ€è¿‘ã®ä»•æ§˜ã«åˆã‚ã›ã¦audioplayer+playblockingã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
+%      å¤‰æ›´ã¯ã€DemoAF_CriticalBand.m, DemoAF_NotchedNoise.mã®ä¸­ã§ã™ã€‚
+%      MATLAB2013aã§ã®å‹•ä½œã¯ç¢ºèªæ¸ˆã¿ã€‚
 %
 %     Note3 (2017/12/13)
-%      DemoAF_ExcitationPattern‚ðDemoAF_Basics’†‚É“±“üB
+%      DemoAF_ExcitationPatternã‚’DemoAF_Basicsä¸­ã«å°Žå…¥ã€‚
 %
 %     Note4 (2018/3/28)
-%    isOctave“±“üBOctave‚Å‚Ì“ú–{Œê•¶Žš‰»‚¯‚ð”ð‚¯‚é‚½‚ßA‰pŒê‚ÉØ‚è‘Ö‚¦B
+%    isOctaveå°Žå…¥ã€‚Octaveã§ã®æ—¥æœ¬èªžæ–‡å­—åŒ–ã‘ã‚’é¿ã‘ã‚‹ãŸã‚ã€è‹±èªžã«åˆ‡ã‚Šæ›¿ãˆã€‚
 %
 %     Note5 (2019/5/28)
-%    fminsearch‚Ì®‡«‚ª‚È‚¢‚½‚ßAOctave‚ÅƒtƒBƒ‹ƒ^Œ`ó„’è‚ª‚Å‚«‚È‚¢B
-%    ‚µ‚½‚ª‚Á‚ÄAƒmƒbƒ`ŽG‰¹‚ÌŽÀŒ±‚Í‚Å‚«‚é‚ªA‚±‚Ìƒf[ƒ^‚ÍƒtƒBƒ‹ƒ^Œ`ó„’è‚ÅŽg‚¦‚È‚¢B
+%    fminsearchã®æ•´åˆæ€§ãŒãªã„ãŸã‚ã€Octaveã§ãƒ•ã‚£ãƒ«ã‚¿å½¢çŠ¶æŽ¨å®šãŒã§ããªã„ã€‚
+%    ã—ãŸãŒã£ã¦ã€ãƒŽãƒƒãƒé›‘éŸ³ã®å®Ÿé¨“ã¯ã§ãã‚‹ãŒã€ã“ã®ãƒ‡ãƒ¼ã‚¿ã¯ãƒ•ã‚£ãƒ«ã‚¿å½¢çŠ¶æŽ¨å®šã§ä½¿ãˆãªã„ã€‚
 %
 %     Note6 (2019/6/22)
-%    DirWork‚ÌÝ’è‚ÉŠÖ‚µ‚Ä•ÏXBdefault‚ðWin‘Î‰ž‚É‚à‚µ‚½‚Â‚à‚èB
+%    DirWorkã®è¨­å®šã«é–¢ã—ã¦å¤‰æ›´ã€‚defaultã‚’Winå¯¾å¿œã«ã‚‚ã—ãŸã¤ã‚‚ã‚Šã€‚
 %
 %     Note7 (2020/7/1)
-%     octave‚Å‚à“®‚­‚æ‚¤‚É‰ü—Ç
+%     octaveã§ã‚‚å‹•ãã‚ˆã†ã«æ”¹è‰¯
 %
 %     Note8(2023/7/17)
-%     Win Octave8.2.0‚ÅAeps‚ªo—Í‚Å‚«‚¸ƒtƒŠ[ƒYBDemoAF_PrintFig.m‚ð•ÏXBpngo—Í‚Ì‚Ý‚É
+%     Win Octave8.2.0ã§ã€epsãŒå‡ºåŠ›ã§ããšãƒ•ãƒªãƒ¼ã‚ºã€‚DemoAF_PrintFig.mã‚’å¤‰æ›´ã€‚pngå‡ºåŠ›ã®ã¿ã«
 %
 %
 clear
 
-%  DirWork ‚Í‚±‚¿‚ç‚ÅŠ„‚è“–‚ÄB SwDirWork‚Ì‘I‘ð‚ÍíœB 1 Jul 2020
-ThisFile = mfilename;  % ‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌŠÝ‚ð’²‚×Dir1‚É“ü‚ê‚éB
+%  DirWork ã¯ã“ã¡ã‚‰ã§å‰²ã‚Šå½“ã¦ã€‚ SwDirWorkã®é¸æŠžã¯å‰Šé™¤ã€‚ 1 Jul 2020
+ThisFile = mfilename;  % ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®æ‰€åœ¨ã‚’èª¿ã¹Dir1ã«å…¥ã‚Œã‚‹ã€‚
 DirFullProg = which(ThisFile);
 [Dir1 Name1] = fileparts(DirFullProg);
 DirWork = [Dir1 '/Figs/'];
-mkdir(DirWork) % Ž–‘O‚ÉFigs‚Æ‚¢‚¤directory‚ðì‚Á‚Ä‚¨‚­•K—v‚ ‚èB
-chdir(Dir1); % ƒvƒƒOƒ‰ƒ€‚ÌDirectory‚É‹­§ˆÚ“®
-disp(['}–Ê‚âƒf[ƒ^“™‚ÍF ' DirWork '‚Éo—Í^•Û‘¶‚³‚ê‚Ü‚·B']);
+mkdir(DirWork) % äº‹å‰ã«Figsã¨ã„ã†directoryã‚’ä½œã£ã¦ãŠãå¿…è¦ã‚ã‚Šã€‚
+chdir(Dir1); % ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®Directoryã«å¼·åˆ¶ç§»å‹•
+disp(['å›³é¢ã‚„ãƒ‡ãƒ¼ã‚¿ç­‰ã¯ï¼š ' DirWork 'ã«å‡ºåŠ›ï¼ä¿å­˜ã•ã‚Œã¾ã™ã€‚']);
 
 
-%SwEnglish = 0;  % Japanese    “ú–{Œê 
-SwEnglish = 1; % English     ‰pŒê@ (default)
+%SwEnglish = 0;  % Japanese    æ—¥æœ¬èªž 
+SwEnglish = 1; % English     è‹±èªžã€€ (default)
 
 isOctave = 0;
 NameRsltNN = [DirWork 'DemoAF_RsltNN.mat']; 
-if exist('OCTAVE_VERSION') == 5  % Octave‚È‚ç‚P‚É‚È‚éB
+if exist('OCTAVE_VERSION') == 5  % Octaveãªã‚‰ï¼‘ã«ãªã‚‹ã€‚
     isOctave =1;
-    NameRsltNN = [DirWork 'DemoAF_RsltNN_octave.mat'];  % matŒ`Ž®‚ªˆÙ‚È‚é‚½‚ßB
-    SwEnglish = 1; % Octave‚¾‚Æ‰pŒê‚É
+    NameRsltNN = [DirWork 'DemoAF_RsltNN_octave.mat'];  % matå½¢å¼ãŒç•°ãªã‚‹ãŸã‚ã€‚
+    SwEnglish = 1; % Octaveã ã¨è‹±èªžã«
 end
 
 
-%SwSound = 0;   % No sound playback for@lecture demonstration@‹³Žºƒfƒ‚—p
+%SwSound = 0;   % No sound playback forã€€lecture demonstrationã€€æ•™å®¤ãƒ‡ãƒ¢ç”¨
 SwSound = 1;  % playback sound (default)
 
 % SwPrint = 0; % No print. e.g. when there is trouble with MATLAB2015a.
 SwPrint = 1;
 
 if SwEnglish == 0
-  strDemo0 = 'ƒfƒ‚:';
-  strDemo(1) = {'  1) ’®ŠoƒtƒBƒ‹ƒ^‚ÌŠî‘b'};
-  strDemo(2) = {'  2) —ÕŠE‘Ñˆæ•'};
-  strDemo(3) = {'  3) ƒmƒbƒ`ŽG‰¹ƒ}ƒXƒLƒ“ƒO–@'};
-  strDemo(4) = {'  4) ’®ŠoƒtƒBƒ‹ƒ^Œ`ó„’è'};
-  strDemoQ = 'ƒfƒ‚”Ô†‚Ì‘I‘ð >>';
+  strDemo0 = 'ãƒ‡ãƒ¢:';
+  strDemo(1) = {'  1) è´è¦šãƒ•ã‚£ãƒ«ã‚¿ã®åŸºç¤Ž'};
+  strDemo(2) = {'  2) è‡¨ç•Œå¸¯åŸŸå¹…'};
+  strDemo(3) = {'  3) ãƒŽãƒƒãƒé›‘éŸ³ãƒžã‚¹ã‚­ãƒ³ã‚°æ³•'};
+  strDemo(4) = {'  4) è´è¦šãƒ•ã‚£ãƒ«ã‚¿å½¢çŠ¶æŽ¨å®š'};
+  strDemoQ = 'ãƒ‡ãƒ¢ç•ªå·ã®é¸æŠž >>';
 
 else    
   strDemo0 ='Demo:';

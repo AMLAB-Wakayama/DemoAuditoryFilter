@@ -1,4 +1,4 @@
-%
+﻿%
 %	Frequency Response of GammaChirp
 %	Toshio IRINO
 %	Original Version: 30 Sept 98

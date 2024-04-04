@@ -1,4 +1,4 @@
-%
+﻿%
 %	Frequency -> ERB_N-rate and ERB_N-Bandwidth (Glasberg and Moore, 1990)
 %	Toshio IRINO
 %	11 Mar. 1998
